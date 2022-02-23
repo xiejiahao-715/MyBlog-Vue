@@ -1,0 +1,77 @@
+@import "~@/assets/css/theme/themeMixin.scss";
+
+// 父元素是& body
+@include themeCustomize{
+  &{
+    background-color: themed('body-backgroundColor');
+  }
+  .top-banner{
+    filter: themed('topBanner-filter');
+    box-shadow: themed('topBanner-boxShadow');
+    -webkit-box-shadow: themed('topBanner-boxShadow');
+  }
+  .tool-item{
+    background-color: themed('toolItem-backgroundColor');
+    color: themed('toolItem-IconColor');
+    box-shadow: themed('toolItem-boxShadow');
+    -webkit-box-shadow: themed('toolItem-boxShadow');
+    .right-tip{
+      box-shadow: themed('toolItem-tip-boxShadow');
+      -webkit-box-shadow: themed('toolItem-tip-boxShadow');
+    }
+  }
+  .main{
+    background-color: themed('main-backgroundColor');
+    box-shadow: themed('main-boxShadow');
+    -webkit-box-shadow: themed('main-boxShadow');
+    .category-title{
+      color: themed('blogPost-fontColor');
+    }
+    .blogPost{
+      color: themed('blogPost-fontColor');
+      border-bottom: themed('blogPost-borderBottom');
+      .blogMeta{
+        color: themed('blogMeta-fontColor');
+      }
+      &:after{
+        border: themed('blogPost-after-border');
+        background-color: themed('blogPost-after-backgroundColor');
+        box-shadow: themed('blogPost-after-boxShadow');
+        -webkit-box-shadow: themed('blogPost-after-boxShadow');
+      }
+    }
+    .el-pagination{
+      --el-text-color-regular: #{themed('elPagination-textColor')};
+      .btn-prev,.btn-next{
+        color: themed('elPagination-buttonTextColor');
+      }
+      .el-input .el-input__inner{
+        color: themed('elPagination-buttonTextColor');
+      }
+    }
+  }
+
+  .article-directory{
+    background-color: themed('articleDirectory-backgroundColor');
+    box-shadow: themed('articleDirectory-boxShadow');
+    -webkit-box-shadow: themed('articleDirectory-boxShadow');
+    color: themed('articleDirectory-fontColor');
+    .directory-content{
+      .directory-item{
+        &:hover,&.focus{
+          background-color: themed('articleDirectory-hover-backgroundColor');
+          color: themed('articleDirectory-hover-fontColor');
+        }
+        &:hover::after,&.focus::after{
+          border-left-color: themed('articleDirectory-hover-fontColor');
+        }
+      }
+    }
+  }
+
+  .footer{
+    .background{
+      background: themed('footerBackground');
+    }
+  }
+}

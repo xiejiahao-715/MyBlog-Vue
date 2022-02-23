@@ -1,0 +1,60 @@
+// 默认的样式为light主题
+// light 主题
+$theme-light-topBanner-filter: brightness(1);
+$theme-light-topBanner-boxShadow: 0 1px 2px rgba(150,150,150,.7);
+
+$theme-light-toolItem-backgroundColor: white;
+$theme-light-toolItem-IconColor: #777aaf;
+$theme-light-toolItem-boxShadow: 0 4px 11px -2px rgb(37,44,97,.15),0 1px 3px 0 rgb(93,100,148,.2);
+$theme-light-toolItem-tip-boxShadow:  0 0 6px -1px rgba(140,146,163,.5);
+
+$theme-light-body-backgroundColor: transparent;
+
+$theme-light-main-backgroundColor: rgba(255,255,255,.9);
+$theme-light-main-boxShade: 0 0 20px 10px rgba(220,220,220,.3);
+
+$theme-light-blogPost-fontColor: #3a4145;
+$theme-light-blogPost-borderBottom: #e9e9e9 1px solid;
+$theme-light-blogMeta-fontColor: #888;
+$theme-light-blogPost-after-border: 1px solid #e9e9e9;
+$theme-light-blogPost-after-backgroundColor: #fff;
+$theme-light-blogPost-after-boxShadow: 0 0 0 5px rgba(255,255,255,.7);
+
+$theme-light-articleDirectory-backgroundColor: hsla(0,0%,100%,.9);
+$theme-light-articleDirectory-boxShadow: 0 4px 11px -2px rgb(37 44 97/15%),0 1px 3px 0 rgb(93 100 148/20%);
+$theme-light-articleDirectory-fontColor: #000;
+$theme-light-articleDirectory-hover-fontColor: #807dd4;
+$theme-light-articleDirectory-hover-backgroundColor: #rgba(80,80,80,.04);
+
+$theme-light-elPagination-textColor: #3a4145;
+$theme-light-elPagination-buttonTextColor: #3a4145;
+
+// dark 主题
+$theme-dark-topBanner-filter: brightness(.8);
+$theme-dark-topBanner-boxShadow: 0 1px 2px rgba(0,0,0,.5);
+
+$theme-dark-toolItem-backgroundColor: #333;
+$theme-dark-toolItem-IconColor: rgb(153, 153, 153);
+$theme-dark-toolItem-boxShadow: 0 1px 20px 0 rgba(0,0,0,.5),inset 0 0 0 0 rgba(0,0,0,.5);
+$theme-dark-toolItem-tip-boxShadow:  0 1px 20px 0 rgba(0,0,0,.5),inset 0 0 0 0 rgba(0,0,0,.5);
+
+$theme-dark-body-backgroundColor: #333;
+
+$theme-dark-main-backgroundColor: rgba(51,51,51,.9);
+$theme-dark-main-boxShade: 0 0 20px 10px rgba(0,0,0,.3);
+
+$theme-dark-blogPost-fontColor: #ddd;
+$theme-dark-blogPost-borderBottom: #555 1px solid ;
+$theme-dark-blogMeta-fontColor: #999;
+$theme-dark-blogPost-after-border: 1px solid #555;
+$theme-dark-blogPost-after-backgroundColor: #333;
+$theme-dark-blogPost-after-boxShadow: 0 0 0 5px rgba(51,51,51,.7);
+
+$theme-dark-articleDirectory-backgroundColor: rgba(51,51,51,.9);
+$theme-dark-articleDirectory-boxShadow: 0 0 20px 10px rgba(0,0,0,.3);
+$theme-dark-articleDirectory-fontColor: #999;
+$theme-dark-articleDirectory-hover-fontColor: #567fb5;
+$theme-dark-articleDirectory-hover-backgroundColor: rgba(0,0,0,.1);
+
+$theme-dark-elPagination-textColor: #ddd;
+$theme-dark-elPagination-buttonTextColor: #333;

@@ -1,0 +1,65 @@
+@import "~@/assets/css/theme/variable.scss";
+$themes:(
+  light:(
+    topBanner-filter: $theme-light-topBanner-filter,
+    topBanner-boxShadow: $theme-light-topBanner-boxShadow,
+
+    toolItem-backgroundColor: $theme-light-toolItem-backgroundColor,
+    toolItem-IconColor: $theme-light-toolItem-IconColor,
+    toolItem-boxShadow: $theme-light-toolItem-boxShadow,
+    toolItem-tip-boxShadow: $theme-light-toolItem-tip-boxShadow,
+
+    body-backgroundColor: $theme-light-body-backgroundColor,
+
+    main-backgroundColor: $theme-light-main-backgroundColor,
+    main-boxShadow: $theme-light-main-boxShade,
+
+    blogPost-fontColor: $theme-light-blogPost-fontColor,
+    blogPost-borderBottom: $theme-light-blogPost-borderBottom,
+    blogMeta-fontColor: $theme-light-blogMeta-fontColor,
+    blogPost-after-border: $theme-light-blogPost-after-border,
+    blogPost-after-backgroundColor: $theme-light-blogPost-after-backgroundColor,
+    blogPost-after-boxShadow: $theme-light-blogPost-after-boxShadow,
+
+    articleDirectory-backgroundColor: $theme-light-articleDirectory-backgroundColor,
+    articleDirectory-boxShadow: $theme-light-articleDirectory-boxShadow,
+    articleDirectory-fontColor: $theme-light-articleDirectory-fontColor,
+    articleDirectory-hover-fontColor: $theme-light-articleDirectory-hover-fontColor,
+    articleDirectory-hover-backgroundColor: $theme-light-articleDirectory-hover-backgroundColor,
+
+    elPagination-textColor: $theme-light-elPagination-textColor,
+    elPagination-buttonTextColor: $theme-light-elPagination-buttonTextColor,
+  ),
+  dark:(
+    topBanner-filter: $theme-dark-topBanner-filter,
+    topBanner-boxShadow: $theme-dark-topBanner-boxShadow,
+
+    toolItem-backgroundColor: $theme-dark-toolItem-backgroundColor,
+    toolItem-IconColor: $theme-dark-toolItem-IconColor,
+    toolItem-boxShadow: $theme-dark-toolItem-boxShadow,
+    toolItem-tip-boxShadow: $theme-dark-toolItem-tip-boxShadow,
+
+    body-backgroundColor: $theme-dark-body-backgroundColor,
+
+    main-backgroundColor: $theme-dark-main-backgroundColor,
+    main-boxShadow: $theme-dark-main-boxShade,
+
+    blogPost-fontColor: $theme-dark-blogPost-fontColor,
+    blogPost-borderBottom: $theme-dark-blogPost-borderBottom,
+    blogMeta-fontColor: $theme-dark-blogMeta-fontColor,
+    blogPost-after-border: $theme-dark-blogPost-after-border,
+    blogPost-after-backgroundColor: $theme-dark-blogPost-after-backgroundColor,
+    blogPost-after-boxShadow: $theme-dark-blogPost-after-boxShadow,
+
+    articleDirectory-backgroundColor: $theme-dark-articleDirectory-backgroundColor,
+    articleDirectory-boxShadow: $theme-dark-articleDirectory-boxShadow,
+    articleDirectory-fontColor: $theme-dark-articleDirectory-fontColor,
+    articleDirectory-hover-fontColor: $theme-dark-articleDirectory-hover-fontColor,
+    articleDirectory-hover-backgroundColor: $theme-dark-articleDirectory-hover-backgroundColor,
+    // 隐藏底部背景图片
+    footerBackground: $theme-dark-body-backgroundColor,
+
+    elPagination-textColor: $theme-dark-elPagination-textColor,
+    elPagination-buttonTextColor: $theme-dark-elPagination-buttonTextColor,
+  )
+)

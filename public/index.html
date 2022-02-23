@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!--开发环境 CDN引入-->
+<!--    &lt;!&ndash;vue&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>-->
+<!--    &lt;!&ndash;vue-router&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue-router@4.0.12/dist/vue-router.global.min.js"></script>-->
+<!--    &lt;!&ndash;vuex&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vuex@4.0.2/dist/vuex.global.min.js"></script>-->
+    <!--生产环境 CDN引入-->
+<!--    &lt;!&ndash;vue&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.runtime.global.prod.js"></script>-->
+<!--    &lt;!&ndash;vue-router&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue-router@4.0.12/dist/vue-router.global.prod.js"></script>-->
+<!--    &lt;!&ndash;vuex&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vuex@4.0.2/dist/vuex.global.prod.js"></script>-->
+
+    <!--ElementPlus CDN引入-->
+<!--    &lt;!&ndash;element plus国际化语言包&ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/element-plus@2.0.1/dist/locale/zh-cn.min.js"></script>-->
+<!--    &lt;!&ndash; element plus &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/element-plus@2.0.1/dist/index.full.min.js"></script>-->
+<!--    &lt;!&ndash;element plus  css&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-plus@2.0.1/dist/index.css">-->
+
+    <!-- iconfont图标-->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_3150036_0svq2dgb3d.css">
+    <!--highlight.js的css样式-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/arduino-light.min.css" integrity="sha512-M4nH9C7TRCVWLGruh9fHTfYxGWDiKpOGNjpfC9irhF06aLiYmJczZlW+/6IKOZ+75AGk4Wn4clgd6J13T0zzXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--github-markdown样式表-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" integrity="sha512-KUoB3bZ1XRBYj1QcH4BHCQjurAZnCO3WdrswyLDtp7BMwCw7dPZngSLqILf68SGgvnWHTD5pPaYrXi6wiRJ65g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--viewer.js 样式表-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.3/viewer.min.css" integrity="sha512-tcSv6gq1vocEgNxEUKkayNEcz4FAIGbeVb75f3+xgP7YeVVTMOjlmBxbpdZBfxWOyEPIeozEOft2rro8uKsppQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <!--axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js" integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--jump.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js" integrity="sha512-Q9CUUoQ/LaD+X7jk76kM6swUEc8q0YPGBcH/Lflux+JatH8zIZPkIb0b91NW5ASgy9ENLhTzt2Z/zZ6yyake2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 使用gsap动画库-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--gsap滚动监听插件-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--marked.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.1/marked.min.js" integrity="sha512-hzyXu3u+VDu/7vpPjRKFp9w33Idx7pWWNazPm+aCMRu26yZXFCby1gn1JxevVv3LDwnSbyKrvLo3JNdi4Qx1ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--highlight.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--viewer.js 图片预览-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.3/viewer.min.js" integrity="sha512-otuD/rIrdyoV4nmkmMjpjkHLQ+bXHRPz7Wzafj0HqP87UqGqoKUW+9vLoEGtDZCjD7hxsVC4/ruZPU3YwWr0Xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--鼠标点击出现心型-->
+    <script>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);</script>
+  </body>
+</html>
