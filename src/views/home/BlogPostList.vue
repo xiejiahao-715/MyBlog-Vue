@@ -86,7 +86,6 @@ export default {
       }else{
         return
       }
-      console.log(translateX)
       gsap.fromTo(target,{x: translateX,visibility: 'visible'},{
         duration: .6,
         x: 0
