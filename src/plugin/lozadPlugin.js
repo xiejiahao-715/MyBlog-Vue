@@ -2,6 +2,7 @@
 import lozad from "lozad";
 // 图片预览
 import Viewer from 'viewerjs';
+import "viewerjs/dist/viewer.min.css"
 
 export default function lozadObserver(){
   // 图片预览的对象
@@ -20,7 +21,7 @@ export default function lozadObserver(){
     threshold: 0.1, // ratio of element convergence
     enableAutoReload: true, // it will reload the new image when validating attributes changes
     loaded() {  // 加载完毕，实际图片还在pending中，页面还没显示图片
-      let markdownBody = document.querySelector(".markdown-body")
+      let markdownBody = document.getElementById("markdown-body")
       if (markdownBody) {
         if (viewer === null) {
           viewer = new Viewer(markdownBody)

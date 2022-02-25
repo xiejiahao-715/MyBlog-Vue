@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import jump from 'jump'
+import jump from "@/plugin/jumpPlugin";
 import ThemeSwitch from '@/components/ThemeSwitch'
 import {useRoute} from 'vue-router'
 import {shallowRef, watch} from 'vue'

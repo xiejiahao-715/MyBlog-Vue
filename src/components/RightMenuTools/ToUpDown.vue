@@ -5,9 +5,9 @@
 <script>
 import MenuToolItem from "@/components/RightMenuTools/MenuToolItem";
 import {onBeforeUnmount, onMounted, shallowRef,computed} from "vue";
-import jump from "jump";
 import {gsap} from '@/plugin/gsapPlugin'
 import {throttle} from "@/utils";
+import jump from "@/plugin/jumpPlugin";
 
 export default {
   name: "ToUpDown",

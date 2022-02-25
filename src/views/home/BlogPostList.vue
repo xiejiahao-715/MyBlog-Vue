@@ -64,6 +64,8 @@ export default {
     })
     useLoading(loadingWrapRef,isLoadingValue)
 
+
+    // 通过滚动监听来实现动画
     // 存储滚动监听实例
     let scrollTriggerList = []
     const killAllScrollTrigger = ()=>{

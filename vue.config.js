@@ -1,7 +1,10 @@
+// ElementPlus自动导入
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+// gzip压缩插件
 const CompressionPlugin = require("compression-webpack-plugin");
+
 module.exports = {
   publicPath: '/blog',
   productionSourceMap: false,
@@ -26,13 +29,13 @@ module.exports = {
       // 'vuex': 'Vuex',
       // 'element-plus': 'ElementPlus',
       // 'zh-cn': 'ElementPlusLocaleZhCn',
-      'axios': 'axios',
-      'gsap':'gsap',
-      'ScrollTrigger': 'ScrollTrigger',
-      'marked': 'marked',
-      'highlight.js': 'hljs',
-      'jump': 'Jump',
-      'viewerjs': 'Viewer'
+      // 'axios': 'axios',
+      // 'gsap':'gsap',
+      // 'ScrollTrigger': 'ScrollTrigger',
+      // 'marked': 'marked',
+      // 'highlight.js': 'hljs',
+      // 'jump': 'Jump',
+      // 'viewerjs': 'Viewer'
     },
 
     // ElementPlus的自动导入

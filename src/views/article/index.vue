@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown-body"  v-html="blogContent"></div>
+  <div class="markdown-body"  id="markdown-body" v-html="blogContent"></div>
   <ArticleDirectory></ArticleDirectory>
   <teleport to="#rightMenuTools">
     <MenuToolItem tip="下载该博客" icon-class="iconfont icon-download" @click="downloadBlog"></MenuToolItem>

@@ -1,6 +1,11 @@
 // 解析Markdown文档为html
-import marked from 'marked'
-import hljs from 'highlight.js'
+// 采用cdn引入
+// import marked from 'marked'
+// import hljs from 'highlight.js'
+
+import {marked} from "marked";
+import hljs from "highlight.js"
+import "highlight.js/styles/arduino-light.css"
 
 marked.setOptions({
   renderer: new marked.Renderer(),

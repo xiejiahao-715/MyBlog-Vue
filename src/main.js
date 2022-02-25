@@ -6,15 +6,12 @@ import store from './store'
 
 import '@/assets/css/global.scss'
 
-
-// import ElementPlus from 'element-plus'
-// // 国际化
-// import ElementPlusLocaleZhCn from 'zh-cn'
+// 导入github样式表，如果cdn引入这不需要导入
+import "github-markdown-css"
 
 createApp(App)
     .use(store)
     .use(router)
-    // .use(ElementPlus,{locale: ElementPlusLocaleZhCn})
     .mount('#app')
 
 
