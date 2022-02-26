@@ -18,6 +18,9 @@ body {
   color: #3a4145;
   min-height: 100vh;
 }
+#app{
+  overflow-x: hidden;
+}
 @media only screen and (max-width: 767px) {
   body{
     font-size: 14px;

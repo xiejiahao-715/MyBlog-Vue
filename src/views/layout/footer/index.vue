@@ -81,6 +81,7 @@ export default {
       margin-bottom: 15px;
     }
     .runTime{
+      text-align: center;
       &:hover{
         cursor: default;
       }
@@ -91,12 +92,14 @@ export default {
       }
     }
     .social-icon{
+      text-align: center;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .copyright{
+      text-align: center;
     }
   }
 }
