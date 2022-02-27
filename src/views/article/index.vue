@@ -63,8 +63,15 @@ export default {
     function startWork(content){
       if(worker === undefined){
         worker = new Worker()
+        let timer = setTimeout(()=>{
+          if(worker){
+            stopWork()
+          }
+          clearInterval(timer)
+        },6000)
         worker.addEventListener('message',event=>{
           stopWork()
+          clearInterval(timer)
           renderMarkdown(event.data)
         })
         worker.postMessage(content)

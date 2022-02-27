@@ -8,6 +8,7 @@ router.beforeEach((to,from,next)=>{
     clearTimeout(timer)
     timer = null
   }
+  // 超过了6s时间就自动关闭
   timer = setTimeout(()=>{
     if(store.state.loading === true){
       store.commit('setLoadingStatus',false)
