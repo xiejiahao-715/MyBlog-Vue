@@ -9,6 +9,9 @@ import '@/assets/css/global.scss'
 // 导入github样式表，如果cdn引入这不需要导入
 import "github-markdown-css"
 
+// highlight.js样式表
+import "highlight.js/styles/arduino-light.css"
+
 createApp(App)
     .use(store)
     .use(router)

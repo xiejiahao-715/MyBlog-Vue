@@ -5,7 +5,6 @@
 
 import {marked} from "marked";
 import hljs from "highlight.js"
-import "highlight.js/styles/arduino-light.css"
 
 marked.setOptions({
   renderer: new marked.Renderer(),

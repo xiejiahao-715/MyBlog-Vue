@@ -52,5 +52,14 @@ module.exports = {
         deleteOriginalAssets: false, // 是否删除原文件
       })
     ],
+  },
+  // 配置worker
+  chainWebpack: config => {
+    config.module.rule('worker').test(/\.worker\.js$/).use('worker-loader').loader('worker-loader').options({
+      inline: 'fallback',
+      filename: 'js/[contenthash:8].js',
+      chunkFilename: "js/[contenthash:8].js",
+    }).end();
+    config.module.rule('js').exclude.add(/\.worker\.js$/);
   }
 }

@@ -14,7 +14,7 @@
 
 <script>
 import {onBeforeUnmount, onMounted, ref, shallowReactive, shallowRef} from "vue";
-import { getTopBoundaryToBodyLeft,getRightBoundaryToBodyLeft} from "@/utils/elementDistance";
+import { getTopBoundaryToBodyTop,getRightBoundaryToBodyLeft} from "@/utils/elementDistance";
 import MenuToolItem from "@/components/RightMenuTools/MenuToolItem";
 import DirectoryContent from "@/views/article/DirectoryContent";
 import {gsap} from '@/plugin/gsapPlugin'
@@ -95,12 +95,12 @@ export default {
         positionInfo.right = (right >0 ? right : 5) + 'px'
         positionInfo.width = (rightWidth > props.directoryMinWidth &&rightWidth < props.directoryDefaultWidth ? rightWidth  : props.directoryDefaultWidth) -10  + 'px'
         if(isFixed.value === false) {
-          positionInfo.top = getTopBoundaryToBodyLeft(parentElement) + 10 + 'px'
+          positionInfo.top = getTopBoundaryToBodyTop(parentElement) + 10 + 'px'
         }
       }
       scrollHandler = ()=>{
         let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
-        let topBoundaryToBody = getTopBoundaryToBodyLeft(parentElement) + 10
+        let topBoundaryToBody = getTopBoundaryToBodyTop(parentElement) + 10
         if(scrollTop >= topBoundaryToBody){
           isFixed.value = true
           positionInfo.position = 'fixed'

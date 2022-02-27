@@ -4,7 +4,7 @@
  * 得到一个节点上边界距离body的高度  上边界从border-top开始算 到body顶部
  * @param element dom节点元素  该节点不能脱离文档流
  */
-export function getTopBoundaryToBodyLeft(element){
+export function getTopBoundaryToBodyTop(element){
   let distance = element.offsetTop
   let parentNode = element.offsetParent
   while (parentNode){

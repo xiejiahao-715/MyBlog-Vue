@@ -11,7 +11,7 @@
 <script>
 import {inject, onBeforeUnmount, onMounted, shallowRef} from 'vue'
 import jump from "@/plugin/jumpPlugin";
-import {getTopBoundaryToBodyLeft} from "@/utils/elementDistance";
+import {getTopBoundaryToBodyTop} from "@/utils/elementDistance";
 export default {
   name: "DirectoryContent",
   setup(){
@@ -23,10 +23,13 @@ export default {
     // 定位到元素顶部距离窗口下面 offset的距离
     const offset = 20
     const toAnchor = anchorId=>{
-      jump(`#${anchorId}`,{
-        offset: -offset,
-        duration: 500
-      })
+      let element = document.getElementById(anchorId)
+      if(element) {
+        jump(element, {
+          offset: -offset,
+          duration: 500
+        })
+      }
     }
     const scrollHandler = ()=>{
       // 加2为了消除误差
@@ -35,7 +38,7 @@ export default {
       for(i=0;i<directoryList.length;i++){
         let directory = document.getElementById(directoryList[i].id)
         if(directory){
-          let directoryTopToBody = getTopBoundaryToBodyLeft(directory)
+          let directoryTopToBody = getTopBoundaryToBodyTop(directory)
           if(scrollTop < directoryTopToBody){
             activeIndex.value = i -1;
             break;
