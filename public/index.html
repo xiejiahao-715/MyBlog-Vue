@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!--解决elementPlus在QQ浏览器中的问题,兼容QQ浏览器-->
+    <script> this.globalThis || (this.globalThis = this) </script>
     <!--开发环境 CDN引入-->
     <!--vue-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>-->
