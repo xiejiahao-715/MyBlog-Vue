@@ -15,6 +15,7 @@ import ArticleDirectory from "@/views/article/ArticleDirectory";
 import MenuToolItem from "@/components/RightMenuTools/MenuToolItem";
 import onLoadFinished from "@/hooks/onLoadFinished";
 import lozadObserver from "@/plugin/lozadPlugin"
+import {ElMessageBox} from 'element-plus'
 
 // 引入worker启动新线程解卡顿
 import Worker from '@/plugin/parseMdToHTML.worker'
@@ -33,6 +34,12 @@ export default {
       return route.params.id || null
     })
 
+    // 图片的内容
+    const blogContent = shallowRef('')
+    // 图片目录
+    const blogToc = shallowReactive([])
+    // 将值传递给孙组件 DirectoryContent.vue
+    provide('toc',blogToc)
     // 图片懒加载监听器
     let imageObserver = null
     onBeforeUnmount(()=>{
@@ -40,12 +47,7 @@ export default {
         imageObserver.destroy()
       }
     })
-
-    // 渲染markdown文本和目录
-    const blogContent = shallowRef('')
-    const blogToc = shallowReactive([])
-    // 将值传递给孙组件 DirectoryContent.vue
-    provide('toc',blogToc)
+    // 渲染markdown文本和目录，开启图片的懒加载，启用图片预览
     const renderMarkdown = async markdown=>{
       if(Array.isArray(markdown.toc)) {
         blogToc.splice(0, blogToc.length, ...markdown.toc)
@@ -58,7 +60,7 @@ export default {
       // 关闭全局的加载状态
       store.commit('setLoadingStatus', false)
     }
-    // work Api 开启线程
+    // work Api 开启新线程 避免highlight.js解析卡顿
     let worker = undefined
     function startWork(content){
       if(worker === undefined){
@@ -77,6 +79,7 @@ export default {
         worker.postMessage(content)
       }
     }
+    // 停止work线程
     function stopWork(){
       if(worker){
         worker.terminate()
@@ -89,19 +92,27 @@ export default {
       return getPublishedBlogContentByIdApi(blogId.value)
         .then(res=>{
           startWork(res)
-        })
-        .catch(()=>{
+        }).catch(()=>{
           // 重定向到主页
           router.push({name: 'home'})
         })
     }
-
     // 自定义的钩子函数  获取博客内容
     onLoadFinished(async ()=>{
       await getBlogContent()
     },false)
+
+    // 下载博客的接口
     const downloadBlog = ()=>{
-      downloadBlogApi(blogId.value)
+      ElMessageBox.confirm('下载的博客为.md格式，与所有图片一起包含在压缩包中，需要查看请先解压','下载说明',{
+        type: 'info',
+        confirmButtonText: '下载',
+        cancelButtonText: '取消',
+        draggable: true,
+        roundButton: true,
+      }).then(()=>{
+        downloadBlogApi(blogId.value)
+      }).catch(()=>{})
     }
 
     return {

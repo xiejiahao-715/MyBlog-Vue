@@ -12,6 +12,8 @@ import "github-markdown-css"
 // highlight.js样式表
 import "highlight.js/styles/arduino-light.css"
 
+import 'element-plus/es/components/message-box/style/css'
+
 createApp(App)
     .use(store)
     .use(router)

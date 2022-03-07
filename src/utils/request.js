@@ -13,7 +13,7 @@ const service = axios.create({
 service.interceptors.response.use(
     response=>{
       let res = response.data
-      // 请求自定义处理  不适用默认
+      // 请求自定义处理
       if(response.config.defineHandler === true){
         return res
       }else {

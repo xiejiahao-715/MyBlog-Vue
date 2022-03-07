@@ -7,6 +7,7 @@
       <i class="item iconfont icon-interactive"></i>{{blogInfo.commentCount}}
       <i class="item iconfont icon-blog-tag" v-if="blogCategory"></i>{{blogCategory}}
     </div>
+    <div class="update-time" v-if="blogInfo.updateTime && blogInfo.publishTime !== blogInfo.updateTime">{{'最近更新: '+ dateFormat(blogInfo.updateTime)}}</div>
   </div>
 </template>
 
@@ -81,9 +82,17 @@ export default {
     color: rgba(255,255,255,.9);
     font-family: Noto Sans SC,serif;
     text-shadow: 0 3px 6px rgb(0 0 0 / 50%);
+    margin-bottom: 10px;
     .item{
       margin: 0 5px;
     }
+  }
+  .update-time{
+    display: inline;
+    font-size: 15px;
+    background-color: #6fa3ef;
+    border-radius: 4px;
+    padding: 0 5px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -103,6 +112,10 @@ export default {
     }
     .meta{
       font-size: 13px;
+      margin-bottom: 5px;
+    }
+    .update-time{
+      font-size: 12px;
     }
   }
 }

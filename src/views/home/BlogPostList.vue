@@ -90,7 +90,8 @@ export default {
       }
       gsap.fromTo(target,{x: translateX,visibility: 'visible'},{
         duration: .6,
-        x: 0
+        x: 0,
+        visibility: 'visible'
       })
     }
     // 监听数据的改变添加 滚动监听动画

@@ -11,6 +11,7 @@ import BlogPostList from "@/views/home/BlogPostList";
 import { shallowReactive, shallowRef, watch} from "vue";
 import {getPublishedBlogPageApi} from "@/api/blog";
 import onLoadFinished from "@/hooks/onLoadFinished";
+import jump from "@/plugin/jumpPlugin";
 export default {
   name: 'home',
   components:{
@@ -35,7 +36,7 @@ export default {
     const isLoading = shallowRef(false)
     watch([()=>pagination.current,()=>pagination.limit],()=>{
       isLoading.value = true
-      getBlogPagePublished().finally(()=>{isLoading.value = false})
+      getBlogPagePublished().finally(()=>{jump('#top-banner-end',{duration: 0});isLoading.value = false;})
 
     },{immediate:false,deep:true})
 
