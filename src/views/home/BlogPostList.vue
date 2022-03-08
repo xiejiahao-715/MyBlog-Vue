@@ -1,7 +1,7 @@
 <template>
   <div class="blogPostList" ref="loadingWrapRef" v-if="blogPostList">
     <BlogPost v-for="blog in blogPostList" :key="blog.id" :blog-post-info="blog"
-              class="blog" scroll-trigger="true" style="visibility: hidden"></BlogPost>
+              class="blog" scroll-trigger="true"></BlogPost>
   </div>
   <!-- 自带分页组件 -->
   <el-pagination
@@ -103,6 +103,8 @@ export default {
           let nodeList = loadingWrapRef.value.querySelectorAll(".blogPostList>.blog[scroll-trigger='true']")
           for(let i=0;i<nodeList.length;i++){
             let target = nodeList[i]
+            target.style.visibility = "hidden"
+            console.log(target)
             let direction = i%2===0 ? 'left' : 'right'
             let scrollTrigger = ScrollTrigger.create({
               trigger: target,
