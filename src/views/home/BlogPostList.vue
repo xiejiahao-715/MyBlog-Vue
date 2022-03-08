@@ -104,7 +104,6 @@ export default {
           for(let i=0;i<nodeList.length;i++){
             let target = nodeList[i]
             target.style.visibility = "hidden"
-            console.log(target)
             let direction = i%2===0 ? 'left' : 'right'
             let scrollTrigger = ScrollTrigger.create({
               trigger: target,
