@@ -3,7 +3,7 @@ import axios from "axios";
 // 本地环境
 // const baseURL = 'http://127.0.0.1:8080'
 // 发布环境
-const baseURL = 'http://47.95.207.40:8080'
+const baseURL = 'https://123.56.104.224:8080/'
 
 // baseURL配置不要在尾部加上 /
 const service = axios.create({

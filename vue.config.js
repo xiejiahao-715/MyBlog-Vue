@@ -13,7 +13,7 @@ module.exports = {
     // 代理静态资源
     proxy: {
       '/resource': {
-        target: 'http://47.95.207.40:80/resource',
+        target: 'http://123.56.104.224:80/resource',
         ws: true,
         changeOrigin: true,
         pathRewrite : {

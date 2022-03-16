@@ -3,7 +3,7 @@
     <div class="directory-item"
          v-for="(item,index) in directoryList" :key="item.id"
          @click="toAnchor(item.id)" :class="{'focus': activeIndex === index}">
-      <span :style="{'margin-left': (item.level-1) * 8 + 'px'}">{{item.label}}</span>
+      <span :style="{'margin-left': (item.level-1) * 8 + 'px'}" v-html="item.label"></span>
     </div>
   </div>
 </template>
