@@ -13,7 +13,7 @@ module.exports = {
     // 代理静态资源
     proxy: {
       '/resource': {
-        target: 'http://123.56.104.224:80/resource',
+        target: 'https://www.xiejiahao.top/resource',
         ws: true,
         changeOrigin: true,
         pathRewrite : {
@@ -61,5 +61,7 @@ module.exports = {
       chunkFilename: "js/[contenthash:8].js",
     }).end();
     config.module.rule('js').exclude.add(/\.worker\.js$/);
+    // 加载ico图片文件
+    config.module.rule('image').test(/\.ico$/).use('url-loader').loader('url-loader')
   }
 }

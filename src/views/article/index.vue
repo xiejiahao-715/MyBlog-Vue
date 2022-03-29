@@ -16,6 +16,7 @@ import MenuToolItem from "@/components/RightMenuTools/MenuToolItem";
 import onLoadFinished from "@/hooks/onLoadFinished";
 import lozadObserver from "@/plugin/lozadPlugin"
 import {ElMessageBox} from 'element-plus'
+import addCopyCode from '@/plugin/CopyCodePlugin'
 
 // 引入worker启动新线程解卡顿
 import Worker from '@/plugin/parseMdToHTML.worker'
@@ -59,6 +60,8 @@ export default {
       imageObserver.observe()
       // 关闭全局的加载状态
       store.commit('setLoadingStatus', false)
+      // 为code代码块添加一键复制功能
+      addCopyCode("#markdown-body")
     }
     // work Api 开启新线程 避免highlight.js解析卡顿
     let worker = undefined
@@ -132,6 +135,9 @@ export default {
     &::-webkit-scrollbar-thumb{
       border-radius: 4px;
     }
+  }
+  img{
+    cursor: url(~@/assets/img/cursor-check.ico),pointer;
   }
 }
 </style>

@@ -42,3 +42,22 @@ export function downloadBlogApi(id){
   link.click()
   link.remove()
 }
+
+// 获取二维码
+export function getUnAccessLimitCodeSrcApi(){
+  // 通过拼接时间戳达到刷新验证码的目的
+  return request({
+    url: '/blog/unAccessLimit/code',
+    method: 'get',
+  })
+}
+
+export function verifyUnAccessLimitCodeApi(code){
+  return request({
+    url: '/blog/unAccessLimit/verify',
+    method: 'get',
+    params: {
+      code
+    }
+  })
+}

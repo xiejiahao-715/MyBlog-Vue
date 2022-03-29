@@ -20,6 +20,12 @@ const routes = [
       component: ()=>import('@/views/category')
     }]
   },
+  {
+    path: '/509',
+    component: ()=>import('@/views/509'),
+    name: '509',
+    meta: {title: '检测到ip恶意访问'}
+  }
 ]
 
 const router = createRouter({

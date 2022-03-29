@@ -15,7 +15,16 @@
         </div>
       </div>
       <div class="copyright">
-        Copyright © 2022 <a class="out-link" target="_blank" href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory">BNDong / Cnblogs-Theme-SimpleMemory</a>
+          Copyright © 2022<a class="out-link" target="_blank" href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory">BNDong / Cnblogs-Theme-SimpleMemory</a>
+      </div>
+      <div class="legalize">
+        <div class="icp"><a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2022004181号-1</a></div>
+        <div  class="policy">
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011402000618">
+            <img src="@/assets/img/police.png"  alt="policy.png"/><span>鄂公网安备 42011402000618号</span>
+          </a>
+        </div>
+        <div class="icp" style="width: 100%;margin-top: 5px;">ICP主体：<a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2022004181号</a></div>
       </div>
     </div>
   </div>
@@ -100,6 +109,27 @@ export default {
     }
     .copyright{
       text-align: center;
+    }
+    .legalize{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      a{
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+          color: #58a6ff;
+        }
+      }
+      .policy{
+        margin-left: 10px;
+        a{
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }

@@ -13,6 +13,7 @@ import "github-markdown-css"
 import "highlight.js/styles/arduino-light.css"
 
 import 'element-plus/es/components/message-box/style/css'
+import 'element-plus/es/components/message/style/css'
 
 createApp(App)
     .use(store)
