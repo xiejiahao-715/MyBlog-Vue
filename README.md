@@ -4,7 +4,7 @@
 
 > 样式参考了  [Cnblogs-Theme-SimpleMemory项目](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory)
 
-预览地址：[我的博客](http://47.95.207.40/blog/)
+预览地址：[我的博客](https://www.xiejiahao.top)
 
 ## Project setup
 
