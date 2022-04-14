@@ -1,24 +1,25 @@
+$fontPath: 'https://cdn.jsdelivr.net/gh/xiejiahao-715/Resource@1.0.1/fonts/';
 @font-face {
     font-family: 'Playball';
     font-style: normal;
     font-weight: 400;
-    src: local('Playball'), local('Playball-Regular'), url("https://cdn.jsdelivr.net/gh/xiejiahao-715/Resource@1.0.0/fonts/Playball.woff2") format('woff2');
+    src: local('Playball'), local('Playball-Regular'), url("#{$fontPath}Playball.woff2") format('woff2');
 }
 @font-face {
     font-family: 'Long Cang';
     font-style: normal;
     font-weight: 400;
-    src: local('Long Cang Regular'), local('LongCang-Regular') ,url("https://cdn.jsdelivr.net/gh/xiejiahao-715/Resource@1.0.0/fonts/LongCang.woff2") format('woff2');
+    src: local('Long Cang Regular'), local('LongCang-Regular') ,url("#{$fontPath}LongCang.woff2") format('woff2');
 }
 @font-face {
     font-family: 'Ubuntu Mono';
     font-style: normal;
     font-weight: 400;
-    src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url("https://cdn.jsdelivr.net/gh/xiejiahao-715/Resource@1.0.0/fonts/UbuntuMono.woff2") format('woff2');
+    src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url("#{$fontPath}UbuntuMono.woff2") format('woff2');
 }
 @font-face {
     font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: 400;
-    src: local('Noto Sans SC Regular'), local('NotoSansSC-Regular'), url("https://cdn.jsdelivr.net/gh/xiejiahao-715/Resource@1.0.0/fonts/NotoSansSC.woff2") format('woff2');
+    src: local('Noto Sans SC Regular'), local('NotoSansSC-Regular'), url("#{$fontPath}NotoSansSC.woff2") format('woff2');
 }

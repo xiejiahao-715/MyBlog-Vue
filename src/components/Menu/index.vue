@@ -109,7 +109,7 @@ export default {
   background-position: 50%;
   background-repeat: no-repeat;
   position: fixed;
-  z-index: 1001;
+  z-index: 1100;
   height: 100%;
   background-color: #1d1d1d;
   top: 0;

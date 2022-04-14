@@ -36,14 +36,15 @@ body {
   color: #FFF
 }
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 3px
+  width: 9px;
+  height: 9px
 }
 ::-webkit-scrollbar-track {
-  width: 3px;
+  width: 9px;
   background-color: #f9f9f9
 }
 ::-webkit-scrollbar-thumb {
+  border-radius:5px;
   background-color: #999;
   background-clip: padding-box;
   min-height: 100px

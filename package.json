@@ -15,6 +15,7 @@
     "gsap": "^3.9.1",
     "highlight.js": "^11.4.0",
     "jump.js": "^1.0.2",
+    "live2d-widget": "^3.1.4",
     "lozad": "^1.16.0",
     "marked": "^4.0.1",
     "toprogress": "^0.1.3",
