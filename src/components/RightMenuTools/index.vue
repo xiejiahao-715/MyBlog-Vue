@@ -6,6 +6,7 @@
       <ToUpDown></ToUpDown>
       <BackHome></BackHome>
       <div id="articleDirectoryController" style="width: 100%"></div>
+      <div id="snowflakeController" style="width: 100%"></div>
     </div>
   </teleport>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <teleport to="body">
-    <div class="particles">
+    <div class="particles" v-if="initComplete">
       <div ref="particle1" class="particles-layer particles-layer--1" style="opacity: 0.07;"></div>
       <div ref="particle2" class="particles-layer particles-layer--2" style="opacity: 0.07;"></div>
       <div ref="particle3" class="particles-layer particles-layer--3" style="opacity: 0.07;"></div>
@@ -9,13 +9,15 @@
 </template>
 
 <script>
-import {onBeforeUnmount, onMounted,ref} from "vue";
+import {onBeforeUnmount, onMounted, ref, shallowRef} from "vue";
 import {gsap} from '@/plugin/gsapPlugin';
 import {throttle} from "@/utils";
 
 export default {
   name: 'Particles',
   setup(){
+    const initComplete = shallowRef(false)
+
     const particle1 = ref()
     const particle2 = ref()
     const particle3 = ref()
@@ -55,6 +57,7 @@ export default {
         }
       }
       document.addEventListener("mousemove",particlesMousemove)
+      initComplete.value = true
     })
     onBeforeUnmount(()=>{
       if(particlesMousemove){
@@ -62,7 +65,8 @@ export default {
       }
     })
     return{
-      particle1,particle2,particle3
+      particle1,particle2,particle3,
+      initComplete
     }
   }
 }

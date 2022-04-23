@@ -24,7 +24,7 @@ export default {
     const getVerifyImageScr = () => {
       getUnAccessLimitCodeSrcApi()
         .then(res =>{
-          console.log(res)
+          // console.log(res)
           imageSrc.value = res.data.src
         }).catch((error)=>{
           ElMessage({

@@ -1,13 +1,15 @@
 <template>
   <router-view v-cloak/>
-  <L2Dwidget></L2Dwidget>
+  <L2DwidgetAsync :z-index="1070"></L2DwidgetAsync>
 </template>
 <script>
+
+import asyncLoadComponent from "@/hooks/AsyncLoadComponent";
 // 引入看板娘组件
-import L2Dwidget from '@/components/L2Dwidget'
+const L2DwidgetAsync = asyncLoadComponent(()=>import('@/components/L2Dwidget'))
 export default {
   components:{
-    L2Dwidget
-  }
+    L2DwidgetAsync
+  },
 }
 </script>

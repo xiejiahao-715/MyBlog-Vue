@@ -114,3 +114,7 @@ export function dateFormat(date,format = "yyyy-MM-dd hh:mm:ss") {
     return null
   }
 }
+// 判断设备是否为移动设备
+export function isMobile(){
+  return navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+}
