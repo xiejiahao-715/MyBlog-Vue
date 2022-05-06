@@ -11,9 +11,9 @@ marked.setOptions({
   breaks: true,
   gfm: true,
   headerIds:false,
-  highlight: function(code) {
-    return hljs.highlightAuto(code).value;
-  }
+  // highlight: function(code) {
+  //   return hljs.highlightAuto(code).value;
+  // }
 })
 class TOC{
   constructor() {
@@ -54,6 +54,22 @@ export function parseMdToHTML(content){
     html(text){
       let pattern = new RegExp('(<img\\b.*?)src="(.*?)"(.*?/?>)',"g")
       return text.replaceAll(pattern, '$1 data-src="$2" class="lozad" $3')
+    },
+    // 自定义渲染代码块
+    code(code,language){
+      // 代码解析后的html文本
+      let codeHtml = null
+      // 解析后code标签上存在的class,默认存在hljs
+      let classList = ['hljs']
+      if(typeof(language)==='string' && hljs.getLanguage(language)){
+        codeHtml = hljs.highlight(code,{language: language}).value
+        classList.push(`language-${language}`)
+      }else {
+        codeHtml = hljs.highlightAuto(code).value
+      }
+      // 将类的数组转换为字符串
+      classList = classList.join(' ')
+      return `<pre style="position: relative"><code class="${classList}">${codeHtml}</code></pre>`
     }
   }
   marked.use({renderer})

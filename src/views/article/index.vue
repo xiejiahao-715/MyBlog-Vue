@@ -128,12 +128,23 @@ export default {
 <style scoped lang="scss">
 ::v-deep.markdown-body{
   margin-top: 10px;
+  border-radius: 6px;
+  // 导入hljs提供的主题，需手动将css文件转为scss文件
+  @import "~@/assets/css/markdown/hljs/atom-one-dark-reasonable.scss";
   pre{
-    &::-webkit-scrollbar{
-      height: 4px;
-    }
-    &::-webkit-scrollbar-thumb{
-      border-radius: 4px;
+    margin-bottom: 16px;
+    code{
+      // 隐藏code的滚动条
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb{
+        display: none;
+      }
+      padding: 16px;
+      font-size: 85%;
+      line-height: 1.45;
+      border-radius: 6px;
     }
   }
   img{
